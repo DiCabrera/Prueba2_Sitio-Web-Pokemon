@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PKMN Co. | FORM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <script src="script.js" type="text/javascript" defer></script>
+  <link href="styles.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- Jquery-->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!--HEADER-->
+  <header>
+    <img src="img/pkmn_logo.png"
+      class="img-container rounded mx-auto d-block">
+  </header>
+  <!--NAV-->
+  <div>
+    <nav class="mx-auto col-lg-12 col-md-10 col-sm-6 col-4">
+      <ul class="nav justify-content-center">
+        <li class="nav-item ">
+          <a class="nav-link active text-light" aria-current="page" href="./home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="./formulario.html">Iniciar Aventura</a>
+        </li>
+
+        <div class="dropdown">
+          <button class="btn dropdown-toggle text-light" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+            aria-expanded="false">Entrenadores</button>
+          <ul class="dropdown-menu " aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item " href="#">Campeón de la Liga</a></li>
+            <li><a class="dropdown-item " href="#">Alto Mando</a></li>
+            <li><a class="dropdown-item " href="#">Lideres de Gimnasio</a></li>
+          </ul>
+        </div>
+
+        <li class="nav-item"> <a class="nav-link text-light" href="#">F.A.Q</a>
+        </li>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-danger" type="submit">Buscar</button>
+        </form>
+      </ul>
+    </nav>
+  </div>
+
+
+  <div class="mx-auto center">
+    <!--FORMULARIO-->
+    <container>
+      <form action="#" method="post" id="formulario" name="formulario">
+        <div class="row g-3 formulario">
+          <div class="col-lg-12 col-md-10 col-sm-6 col-4 mb-3">
+            <!--NOMBRE-->
+            <b>Nombre</b>
+            <input type="text" class="form-control mb-3" name="txt_nombre" id="txt_nombre" autocomplete="off"
+              placeholder="Antonio">
+
+            <!--EDAD-->
+            <b>Edad</b> <i>(Edad minima 10)</i>
+            <input type="number" class="form-control mb-3" name="num_edad" id="num_edad" autocomplete="off"
+              placeholder="10">
+      
+            <!--RUT-->
+            <b>RUT</b>
+            <input type="text" class="form-control mb-3" name="txt_rut" id="txt_rut" autocomplete="off"
+              placeholder="11222333-4">
+              
+            <!--TELÉFONO-->
+            <b>Teléfono</b>
+            <input type="text" class="form-control mb-3" name="txt_telefono" id="txt_telefono" autocomplete="off"
+              placeholder="912345678">
+            
+              <!--IDENTIDAD-->
+            <b>Te identificas como:</b>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="rd_identity" id="rd_hombre" required>
+              <label class="form-check-label" for="rd_hombre">
+                Hombre
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="rd_identity" id="rd_mujer">
+              <label class="form-check-label" for="rd_mujer">
+                Mujer
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="rd_identity" id="rd_otro">
+              <label class="form-check-label" for="rd_otro">
+                Otro
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="rd_identity" id="rd_none">
+              <label class="form-check-label" for="rd_none">
+                No especificar
+              </label>
+            </div>
+
+            <!--ORIGEN-->
+            <b>Lugar de origen</b>
+            <select name="select" class="form-control mb-3" id="sel_origen" name="sel_origen" required>
+              <option value="value1" selected disabled>-- Selecciona --</option>
+              <option value="value2">Pueblo Paleta</option>
+              <option value="value3">Ciudad Verde</option>
+              <option value="value4">Ciudad Plateada</option>
+              <option value="value5">Ciudad Celeste</option>
+              <option value="value6">Ciudad Azafrán</option>
+              <option value="value7">Ciudad Carmín</option>
+              <option value="value8">Ciudad Azulona</option>
+              <option value="value9">Ciudad Fucsia</option>
+              <option value="value10">Pueblo Lavanda</option>
+              <option value="value11">Isla Canela</option>
+            </select>
+
+            <!--SELECCIONAR POKEMON-->
+            <b>Elige a tu Pokémon inicial</b><br>
+            <i>(Selecciona uno de los tres iconos)</i>
+            <div data-poke-card class="poke-card mb-3 mt-1">
+              <div class="container">
+                <div class="mb-2 mt-2">
+                  
+                  <label>
+                    <input type="radio" name="nature" value="nature1" class="" id="rd_tipos">
+                    <img src="./img/planta.png" class="type-img pe-auto" onclick="searchPokemonPlanta(event)">
+                  </label>
+                
+                  <label>
+                    <input type="radio" name="nature" value="nature2" class="" id="rd_tipos">
+                    <img src="./img/agua.png" class="type-img pe-auto" onclick="searchPokemonAgua(event)">
+                  </label>
+                
+                  <label>
+                    <input type="radio" name="nature" value="nature3" class="" id="rd_tipos">
+                    <img src="./img/fuego.png" class="type-img pe-auto" onclick="searchPokemonFuego(event)">
+                  </label>
+                </div>
+              </div>
+
+              <!--POKÉDEX CARD-->
+              <div data-poke-name>Pokedex</div>
+              <div data-poke-img-container class="img-container">
+                <img data-poke-img class="poke-img" src="./img/poke-shadow.png" />
+              </div>
+              <div data-poke-id></div>
+              <div data-poke-types class="poke-types"></div>
+              <div data-poke-stats class="poke-stats"></div>
+            </div>
+
+            <!--CHECKBOBX-->
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label" for="flexCheckDefault">
+                Deseo recibir consejos sobre mi aventura y mis Pokemon.
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="chk_terms" required>
+              <label class="form-check-label" for="flexCheckChecked">
+                Acepto los <a href="#">Terminos y Condiciones</a>.
+              </label>
+            </div>
+          </div>
+        </div>
+        <!--BOTONES-->
+        <button type="submit" class="btn btn-danger mt-3 btn-lg" value="Enviar" id="btn_enviar" onclick="javascript:void(validar())">¡Comenzar!</button>
+        <input class="btn btn-warning mt-3 btn-lg" type="reset" value="Limpiar">
+
+      </form>
+    </container>
+  </div>
+
+  <footer>
+    <p><b>Correo contacto: </b><a href="#" class="text-light"> pokemon@championships.com</a></p>
+    <p><b>Teléfono contacto: +569 1742 8305</b></p>
+    <p>Videos sobre nosotros:</p>
+    <p><a href="https://www.youtube.com/watch?v=8HujzMCu3RM" class="text-light">Combate Pokémon</a></p>
+    <p><a href="https://www.youtube.com/watch?v=-gKiKpZ_Rio" class="text-light">Canción de la compañía</a></p>
+  </footer>
+</body>
+
+</html>
